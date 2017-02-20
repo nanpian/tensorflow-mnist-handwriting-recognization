@@ -110,7 +110,7 @@ for i in range(1000):
     print("step %d, training accuracy %g"%(i, train_accuracy))
   train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
-save_path = saver.save(sess, "model2.ckpt")
+save_path = saver.save(sess, "./model2.ckpt")
 print ("Model saved in file: ", save_path)
 
 print("test accuracy %g"%accuracy.eval(feed_dict={
